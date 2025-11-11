@@ -1,0 +1,15 @@
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net8.0\Starter.exe
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net8.0\Starter.deps.json
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net8.0\Starter.runtimeconfig.json
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net8.0\Starter.dll
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\bin\Debug\net8.0\Starter.pdb
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.GeneratedMSBuildEditorConfig.editorconfig
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.AssemblyInfoInputs.cache
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.AssemblyInfo.cs
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.csproj.CoreCompileInputs.cache
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.dll
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\refint\Starter.dll
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.pdb
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.genruntimeconfig.cache
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\ref\Starter.dll
+E:\Guided-project-Work-with-variable-data-in-CSharp-main\Guided-project-Work-with-variable-data-in-CSharp-main\Starter\obj\Debug\net8.0\Starter.sourcelink.json
