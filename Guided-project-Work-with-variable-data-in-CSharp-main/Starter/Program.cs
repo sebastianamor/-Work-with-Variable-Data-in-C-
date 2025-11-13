@@ -70,21 +70,26 @@ for (int i = 0; i < maxPets; i++)
             suggestedDonation = "";
             break;
 
-    }
-
+    
+       }
+    
     ourAnimals[i, 0] = "ID #: " + animalID;
     ourAnimals[i, 1] = "Species: " + animalSpecies;
     ourAnimals[i, 2] = "Age: " + animalAge;
     ourAnimals[i, 3] = "Nickname: " + animalNickname;
     ourAnimals[i, 4] = "Physical description: " + animalPhysicalDescription;
     ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
-    ourAnimals[i, 6] = "Suggested Donation: "  + suggestedDonation;
     
-}
+    if (!decimal.TryParse(suggestedDonation, out decimalDonation))
+    {
+        decimalDonation = 45.00m; // si suggestedDonation NO es un número, valor por defecto 45.00
+    }
+    ourAnimals[i, 6] = $"Suggested Donation: {decimalDonation:C2}";
+    } 
 
-// #5 display the top-level menu options
-do
-{
+     // #5 display the top-level menu options
+    do
+    {
     // NOTE: the Console.Clear method is throwing an exception in debug sessions
     Console.Clear();
 
@@ -95,34 +100,28 @@ do
     Console.WriteLine("Enter your selection number (or type Exit to exit the program)");
 
     readResult = Console.ReadLine();
-    
-       if (!decimal.TryParse(suggestedDonation, out decimalDonation)){
-    decimalDonation = 45.00m; // if suggestedDonation NOT a number, default to 45.00
+    if (readResult != null)
+    {
+        menuSelection = readResult.ToLower();
     }
-ourAnimals[i, 6] = $"Suggested Donation: {decimalDonation:C2}";
-}
-
-// #5 display the top-level menu options
-
-// #5 display the top-level menu options
 
     // use switch-case to process the selected menu option
     switch (menuSelection)
     {
-        case "1":
-// list all pet info
-for (int i = 0; i < maxPets; i++)
-{
-    if (ourAnimals[i, 0] != "ID #: ")
-    {
-        Console.WriteLine();
-        for (int j = 0; j < 7; j++) // increased exit condition
-        {
+          case "1":
+           // list all pet info
+          for (int i = 0; i < maxPets; i++)
+          {
+          if (ourAnimals[i, 0] != "ID #: ")
+          {
+          Console.WriteLine();
+          for (int j = 0; j < 7; j++) // increased exit condition
+          {
             Console.WriteLine(ourAnimals[i, j]);
-        }
+          }
+       }
     }
-}
-            Console.WriteLine("\n\rPress the Enter key to continuee");
+            Console.WriteLine("\n\rPress the Enter key to continue");
             readResult = Console.ReadLine();
 
             break;
