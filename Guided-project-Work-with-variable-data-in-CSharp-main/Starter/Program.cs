@@ -12,8 +12,8 @@ int maxPets = 8;
 string? readResult;
 string menuSelection = "";
 
-// #3 array used to store runtime data, there is no persisted data
-string[,] ourAnimals = new string[maxPets, 6];
+// #3 array used to store runtime data - CORREGIDO: 7 columnas en lugar de 6
+string[,] ourAnimals = new string[maxPets, 7];
 
 // #4 create sample data ourAnimals array entries
 for (int i = 0; i < maxPets; i++)
@@ -69,9 +69,7 @@ for (int i = 0; i < maxPets; i++)
             animalNickname = "";
             suggestedDonation = "";
             break;
-
-    
-       }
+    }
     
     ourAnimals[i, 0] = "ID #: " + animalID;
     ourAnimals[i, 1] = "Species: " + animalSpecies;
@@ -80,17 +78,17 @@ for (int i = 0; i < maxPets; i++)
     ourAnimals[i, 4] = "Physical description: " + animalPhysicalDescription;
     ourAnimals[i, 5] = "Personality: " + animalPersonalityDescription;
     
-    if (!decimal.TryParse(suggestedDonation, out decimalDonation))
+    // CORREGIDO: Manejo de suggestedDonation
+    if (!decimal.TryParse(suggestedDonation, out decimal decimalDonation))
     {
-        decimalDonation = 45.00m; // si suggestedDonation NO es un número, valor por defecto 45.00
+        decimalDonation = 45.00m;
     }
     ourAnimals[i, 6] = $"Suggested Donation: {decimalDonation:C2}";
-    } 
+}
 
-     // #5 display the top-level menu options
-    do
-    {
-    // NOTE: the Console.Clear method is throwing an exception in debug sessions
+// #5 display the top-level menu options
+do
+{
     Console.Clear();
 
     Console.WriteLine("Welcome to the Contoso PetFriends app. Your main menu options are:");
@@ -105,29 +103,26 @@ for (int i = 0; i < maxPets; i++)
         menuSelection = readResult.ToLower();
     }
 
-    // use switch-case to process the selected menu option
     switch (menuSelection)
     {
-          case "1":
-           // list all pet info
-          for (int i = 0; i < maxPets; i++)
-          {
-          if (ourAnimals[i, 0] != "ID #: ")
-          {
-          Console.WriteLine();
-          for (int j = 0; j < 7; j++) // increased exit condition
-          {
-            Console.WriteLine(ourAnimals[i, j]);
-          }
-       }
-    }
+        case "1":
+            // list all pet info - CORREGIDO: ahora recorre 7 columnas
+            for (int i = 0; i < maxPets; i++)
+            {
+                if (ourAnimals[i, 0] != "ID #: ")
+                {
+                    Console.WriteLine();
+                    for (int j = 0; j < 7; j++)
+                    {
+                        Console.WriteLine(ourAnimals[i, j]);
+                    }
+                }
+            }
             Console.WriteLine("\n\rPress the Enter key to continue");
             readResult = Console.ReadLine();
-
             break;
 
         case "2":
-            // Display all dogs with a specified characteristic
             Console.WriteLine("\nUNDER CONSTRUCTION - please check back next month to see progress.");
             Console.WriteLine("Press the Enter key to continue.");
             readResult = Console.ReadLine();
