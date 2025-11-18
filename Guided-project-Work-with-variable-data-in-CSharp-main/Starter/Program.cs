@@ -123,13 +123,22 @@ do
             break;
 
         case "2":
-            Console.WriteLine("\nUNDER CONSTRUCTION - please check back next month to see progress.");
-            Console.WriteLine("Press the Enter key to continue.");
-            readResult = Console.ReadLine();
-            break;
+    // Display all dogs with a specified characteristic
+    string dogCharacteristic = "";
 
-        default:
-            break;
+    while (dogCharacteristic == "")
+    {
+        // have the user enter physical characteristics to search for
+        Console.WriteLine($"\nEnter one desired dog characteristics to search for");
+        readResult = Console.ReadLine();
+        if (readResult != null)
+        {
+            dogCharacteristic = readResult.ToLower().Trim();
+        }
+    } 
+    Console.WriteLine("Press the Enter key to continue.");
+    readResult = Console.ReadLine();
+    break;
     }
 
 } while (menuSelection != "exit");
